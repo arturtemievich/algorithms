@@ -1,18 +1,22 @@
 # algorithms
-Algorithms and Data Structures (Python)
 
-Table of contents:
+## Algorithms and Data Structures (Python)
 
-1. File binary_tree_traversal.py:
+### File binary_tree_traversal.py:
 
-   Binary Tree Traversal Algorithms
-    |
-    |-> Breadth-First
-    |         |
-    |         |-> Level-Order
-    |
-    |-> Depth-First
-    |         |
-    |         |-> Preorder:  <root><left><right>
-    |         |-> Inorder:   <left><root><right>
-    |         |-> Postorder: <left><right><root>
+Binary Tree Traversal Algorithms:
+
+> Breadth-First: Level-Order
+
+> Depth-First: Preorder, Inorder, Postorder.
+
+
+### File searching.py
+
+> Linear Search Algorithm
+
+> Binary Search Algorithm
+
+> Breadth First Search (BFS)
+
+> Depth First Search (DFS)

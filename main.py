@@ -1,4 +1,5 @@
 from binary_tree_traversal import TreeNode, BinaryTreeTraversal
+from searching import linear_search, binary_search, binary_search_recursively, GraphSearch
 
 
 def binary_tree_traversal_test_cases():
@@ -34,8 +35,43 @@ def binary_tree_traversal_test_cases():
     print(*binary_tree.postorder_recursive_v1(root=root))
 
 
+def search_test_cases():
+    # example
+    array = [1, 2, 3, 4, 5, 6, 7]
+    n = len(array)
+    for x in [1, 4, 7, 0]:
+        print(linear_search(array=array, x=x) == x - 1,
+              binary_search(array=array, left=0, right=n - 1, x=x) == x - 1,
+              binary_search_recursively(array=array, left=0, right=n - 1, x=x) == x - 1)
+
+
+def graph_search_test_cases():
+    # example
+    graph = {
+        'A': ['B', 'C'],
+        'B': ['D', 'C'],
+        'C': ['F'],
+        'D': [],
+        'E': ['F'],
+        'F': []
+    }
+
+    graph_search = GraphSearch()
+    graph_search.breadth_first_search(graph, 'A')
+    print()
+    graph_search = GraphSearch()
+    graph_search.depth_first_search(graph, 'A')
+
+
 def main():
-    binary_tree_traversal_test_cases()
+    test_cases = (binary_tree_traversal_test_cases,
+                  search_test_cases,
+                  graph_search_test_cases)
+
+    for test_case in test_cases:
+        print(test_case.__name__)
+        test_case()
+        print()
 
 
 if __name__ == "__main__":
