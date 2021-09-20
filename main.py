@@ -1,5 +1,6 @@
 from binary_tree_traversal import TreeNode, BinaryTreeTraversal
 from searching import linear_search, binary_search, binary_search_recursively, GraphSearch
+from array import get_maximum_subarray_sum
 
 
 def binary_tree_traversal_test_cases():
@@ -61,12 +62,25 @@ def graph_search_test_cases():
     print()
     graph_search = GraphSearch()
     graph_search.depth_first_search(graph, 'A')
+    print()
+
+
+def maximum_subarray_sum_test_cases():
+    # Kadane's algorithm
+    case_1 = [-2, 1, -3, 4, -1, 2, 1, -5, 4]  # output: 6
+    case_2 = [1]                              # output: 1
+    case_3 = [5, 4, -1, 7, 8]                 # output: 23
+
+    print(get_maximum_subarray_sum(case_1) == 6)
+    print(get_maximum_subarray_sum(case_2) == 1)
+    print(get_maximum_subarray_sum(case_3) == 23)
 
 
 def main():
     test_cases = (binary_tree_traversal_test_cases,
                   search_test_cases,
-                  graph_search_test_cases)
+                  graph_search_test_cases,
+                  maximum_subarray_sum_test_cases)
 
     for test_case in test_cases:
         print(test_case.__name__)
