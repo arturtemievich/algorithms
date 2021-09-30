@@ -20,3 +20,15 @@ Binary Tree Traversal Algorithms:
 > Breadth First Search (BFS)
 
 > Depth First Search (DFS)
+
+
+### File array.py
+
+> Kadane’s Algorithm
+
+
+## File data_structures.py
+
+> Class Stack
+
+> Class Queue
