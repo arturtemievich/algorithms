@@ -73,17 +73,22 @@ class Queue:
         self._front = 0
 
     def __len__(self):
-        """Return the number of elements in the queue."""
+        """Return the number of elements in the queue.
+        Time Complexity: O(1)
+        """
         return self._size
 
     def is_empty(self):
-        """Return True if the queue is empty."""
+        """Return True if the queue is empty.
+        Time Complexity: O(1)
+        """
         return self._size == 0
 
     def first(self):
         """Return (but do not remove) the element at the front of the queue.
 
         Raise Empty exception if the queue is empty.
+        Time Complexity: O(1)
         """
         if self.is_empty():
             raise Empty("Queue is empty")
@@ -93,6 +98,7 @@ class Queue:
         """Remove and return the first element of the queue (i.e., FIFO).
 
         Raise Empty exception if the queue is empty.
+        Time Complexity: O(1)
         """
         if self.is_empty():
             raise Empty("Queue is empty")
@@ -103,7 +109,9 @@ class Queue:
         return answer
 
     def enqueue(self, e):
-        """Add an element to the back of queue."""
+        """Add an element to the back of queue.
+        Time Complexity: O(1)
+        """
         if self._size == len(self._data):
             self._resize(2 * len(self._data))  # double the array size
         avail = (self._front + self._size) % len(self._data)
