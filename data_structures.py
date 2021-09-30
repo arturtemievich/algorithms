@@ -127,3 +127,9 @@ class Queue:
             self._data[k] = old[walk]  # intentionally shift indices
             walk = (1 + walk) % len(old)  # use old size as modulus
         self._front = 0  # front has been realigned
+
+
+"""References:
+1. Book: Data Structures and Algorithms in Python
+   Authors: Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser
+"""
