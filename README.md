@@ -4,8 +4,6 @@
 
 ### File binary_tree_traversal.py:
 
-Binary Tree Traversal Algorithms:
-
 > Breadth-First: Level-Order
 
 > Depth-First: Preorder, Inorder, Postorder.
